@@ -644,6 +644,10 @@ export interface ApiProfessionalProfessional
     > &
       Schema.Attribute.Private;
     profession: Schema.Attribute.String;
+    professional: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::professional.professional'
+    >;
     profileImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
@@ -655,9 +659,9 @@ export interface ApiProfessionalProfessional
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    users_permissions_user: Schema.Attribute.Relation<
+    user: Schema.Attribute.Relation<
       'oneToOne',
-      'plugin::users-permissions.user'
+      'api::professional.professional'
     >;
     whatsapp: Schema.Attribute.String;
     yearsExperience: Schema.Attribute.Integer;
@@ -1228,10 +1232,6 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
-    professional: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::professional.professional'
-    >;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     ratings: Schema.Attribute.Relation<'oneToMany', 'api::rating.rating'>;
