@@ -14,8 +14,7 @@
     "user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "mappedBy": "professional"
+      "target": "plugin::users-permissions.user"
     },
     "profession": {
       "type": "string"
