@@ -14,8 +14,7 @@
     "users_permissions_user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "professional"
+      "target": "plugin::users-permissions.user"
     },
     "profession": {
       "type": "string"

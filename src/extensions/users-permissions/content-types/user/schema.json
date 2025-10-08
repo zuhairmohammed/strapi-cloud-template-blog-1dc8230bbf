@@ -72,12 +72,6 @@
       "target": "api::profile.profile",
       "inversedBy": "users_permissions_user"
     },
-    "professional": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::professional.professional",
-      "mappedBy": "users_permissions_user"
-    },
     "ratings": {
       "type": "relation",
       "relation": "oneToMany",
