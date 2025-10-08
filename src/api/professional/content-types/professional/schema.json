@@ -14,8 +14,8 @@
     "user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::professional.professional",
-      "inversedBy": "professional"
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "professional"
     },
     "profession": {
       "type": "string"
@@ -76,12 +76,6 @@
     },
     "businessName": {
       "type": "string"
-    },
-    "professional": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::professional.professional",
-      "mappedBy": "user"
     }
   }
 }
