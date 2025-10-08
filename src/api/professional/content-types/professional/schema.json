@@ -11,11 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "users_permissions_user": {
+    "user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "mappedBy": "professional"
+      "target": "api::professional.professional",
+      "inversedBy": "professional"
     },
     "profession": {
       "type": "string"
@@ -76,6 +76,12 @@
     },
     "businessName": {
       "type": "string"
+    },
+    "professional": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::professional.professional",
+      "mappedBy": "user"
     }
   }
 }
