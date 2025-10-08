@@ -82,7 +82,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::professional.professional",
-      "inversedBy": "user"
+      "inversedBy": "users_permissions_user"
     }
   }
 }
