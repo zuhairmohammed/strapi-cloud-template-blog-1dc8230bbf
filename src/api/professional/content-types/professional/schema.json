@@ -23,7 +23,7 @@
     "specialization": {
       "type": "string"
     },
-    "experienceYears": {
+    "yearsExperience": {
       "type": "integer"
     },
     "city": {
@@ -32,7 +32,7 @@
     "state": {
       "type": "string"
     },
-    "bio": {
+    "description": {
       "type": "richtext"
     },
     "profileImage": {
@@ -45,7 +45,7 @@
         "audios"
       ]
     },
-    "whatsappNumber": {
+    "whatsapp": {
       "type": "string"
     },
     "availabilityStatus": {

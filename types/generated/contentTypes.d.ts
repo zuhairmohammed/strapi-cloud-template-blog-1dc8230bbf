@@ -629,13 +629,12 @@ export interface ApiProfessionalProfessional
       ['Online', 'Busy', 'Offline']
     >;
     avgRating: Schema.Attribute.Decimal;
-    bio: Schema.Attribute.RichText;
     businessName: Schema.Attribute.String;
     city: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    experienceYears: Schema.Attribute.Integer;
+    description: Schema.Attribute.RichText;
     isFeatured: Schema.Attribute.Boolean;
     isVerified: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -660,7 +659,8 @@ export interface ApiProfessionalProfessional
       'oneToOne',
       'plugin::users-permissions.user'
     >;
-    whatsappNumber: Schema.Attribute.String;
+    whatsapp: Schema.Attribute.String;
+    yearsExperience: Schema.Attribute.Integer;
   };
 }
 
