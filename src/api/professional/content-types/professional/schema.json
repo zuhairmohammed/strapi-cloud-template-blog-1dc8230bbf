@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "professionals",
+  "info": {
+    "singularName": "professional",
+    "pluralName": "professionals",
+    "displayName": "Professional"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "professional"
+    },
+    "profession": {
+      "type": "string"
+    },
+    "specialization": {
+      "type": "string"
+    },
+    "experienceYears": {
+      "type": "integer"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "richtext"
+    },
+    "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "whatsappNumber": {
+      "type": "string"
+    },
+    "availabilityStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Online",
+        "Busy",
+        "Offline"
+      ]
+    },
+    "avgRating": {
+      "type": "decimal"
+    },
+    "responsivenessScore": {
+      "type": "integer"
+    },
+    "isVerified": {
+      "type": "boolean"
+    },
+    "isFeatured": {
+      "type": "boolean"
+    },
+    "ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rating.rating",
+      "mappedBy": "professional"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "Payment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "contactsPurchased": {
+      "type": "integer"
+    },
+    "paymentGatewayId": {
+      "type": "string"
+    },
+    "paymentstatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "success",
+        "failed"
+      ]
+    }
+  }
+}

@@ -9,6 +9,10 @@ Icon
 .Spotlight-V100
 .Trashes
 ._*
+node_modules/
+build/
+.cache/
+.env
 
 
 ############################

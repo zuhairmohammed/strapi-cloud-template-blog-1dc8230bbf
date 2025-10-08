@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_logs",
+  "info": {
+    "singularName": "contact-log",
+    "pluralName": "contact-logs",
+    "displayName": "Contact Log"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "professional": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::professional.professional"
+    },
+    "contactType": {
+      "type": "enumeration",
+      "enum": [
+        "Call",
+        "WhatsApp"
+      ]
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "channelUrl": {
+      "type": "string"
+    }
+  }
+}
