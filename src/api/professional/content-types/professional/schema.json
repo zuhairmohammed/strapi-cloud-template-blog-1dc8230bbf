@@ -17,24 +17,6 @@
       "target": "plugin::users-permissions.user",
       "mappedBy": "professional"
     },
-    "profession": {
-      "type": "string"
-    },
-    "specialization": {
-      "type": "string"
-    },
-    "yearsExperience": {
-      "type": "integer"
-    },
-    "city": {
-      "type": "string"
-    },
-    "state": {
-      "type": "string"
-    },
-    "description": {
-      "type": "richtext"
-    },
     "profileImage": {
       "type": "media",
       "multiple": false,
@@ -45,16 +27,29 @@
         "audios"
       ]
     },
-    "whatsapp": {
+    "profession": {
       "type": "string"
     },
-    "availabilityStatus": {
-      "type": "enumeration",
-      "enum": [
-        "Online",
-        "Busy",
-        "Offline"
-      ]
+    "specialization": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rating.rating",
+      "mappedBy": "professional"
+    },
+    "yearsExperience": {
+      "type": "integer"
+    },
+    "whatsapp": {
+      "type": "string"
     },
     "avgRating": {
       "type": "decimal"
@@ -68,14 +63,19 @@
     "isFeatured": {
       "type": "boolean"
     },
-    "ratings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::rating.rating",
-      "mappedBy": "professional"
-    },
     "businessName": {
       "type": "string"
+    },
+    "availabilityStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Online",
+        "Busy",
+        "Offline"
+      ]
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
