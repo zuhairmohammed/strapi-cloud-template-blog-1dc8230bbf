@@ -73,6 +73,9 @@
       "relation": "oneToMany",
       "target": "api::rating.rating",
       "mappedBy": "professional"
+    },
+    "businessName": {
+      "type": "string"
     }
   }
 }

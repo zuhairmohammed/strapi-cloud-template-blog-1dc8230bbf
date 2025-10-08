@@ -630,6 +630,7 @@ export interface ApiProfessionalProfessional
     >;
     avgRating: Schema.Attribute.Decimal;
     bio: Schema.Attribute.RichText;
+    businessName: Schema.Attribute.String;
     city: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
