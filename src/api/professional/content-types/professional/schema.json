@@ -76,6 +76,13 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "ZipCode": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string",
+      "required": true
     }
   }
 }

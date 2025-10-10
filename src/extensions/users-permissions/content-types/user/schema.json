@@ -66,12 +66,6 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::profile.profile",
-      "inversedBy": "users_permissions_user"
-    },
     "ratings": {
       "type": "relation",
       "relation": "oneToMany",
@@ -83,6 +77,22 @@
       "relation": "oneToOne",
       "target": "api::professional.professional",
       "inversedBy": "user"
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "zipCode": {
+      "type": "string",
+      "required": true
     }
   }
 }

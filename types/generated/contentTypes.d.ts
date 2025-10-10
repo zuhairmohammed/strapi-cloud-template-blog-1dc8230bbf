@@ -659,8 +659,10 @@ export interface ApiProfessionalProfessional
       'oneToOne',
       'plugin::users-permissions.user'
     >;
+    website: Schema.Attribute.String & Schema.Attribute.Required;
     whatsapp: Schema.Attribute.String;
     yearsExperience: Schema.Attribute.Integer;
+    ZipCode: Schema.Attribute.String;
   };
 }
 
@@ -694,10 +696,6 @@ export interface ApiProfileProfile extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     usedContacts: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
-    users_permissions_user: Schema.Attribute.Relation<
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
   };
 }
 
@@ -1217,6 +1215,8 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    lastName: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1228,6 +1228,7 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    phone: Schema.Attribute.String & Schema.Attribute.Required;
     professional: Schema.Attribute.Relation<
       'oneToOne',
       'api::professional.professional'
@@ -1243,13 +1244,13 @@ export interface PluginUsersPermissionsUser
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    user: Schema.Attribute.Relation<'oneToOne', 'api::profile.profile'>;
     username: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
       Schema.Attribute.SetMinMaxLength<{
         minLength: 3;
       }>;
+    zipCode: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
