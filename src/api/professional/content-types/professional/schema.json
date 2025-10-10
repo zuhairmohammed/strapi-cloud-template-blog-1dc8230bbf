@@ -27,9 +27,6 @@
         "audios"
       ]
     },
-    "profession": {
-      "type": "string"
-    },
     "specialization": {
       "type": "string"
     },
@@ -83,6 +80,12 @@
     "website": {
       "type": "string",
       "required": true
+    },
+    "profession": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profession.profession",
+      "inversedBy": "professionals"
     }
   }
 }
