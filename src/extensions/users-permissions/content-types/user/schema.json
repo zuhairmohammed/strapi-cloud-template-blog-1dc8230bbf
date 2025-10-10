@@ -93,6 +93,14 @@
     "zipCode": {
       "type": "string",
       "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
     }
   }
 }
