@@ -28,6 +28,12 @@
     },
     "description": {
       "type": "string"
+    },
+    "professionals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::professional.professional",
+      "mappedBy": "profession"
     }
   }
 }

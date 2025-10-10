@@ -646,6 +646,10 @@ export interface ApiProfessionProfession extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
+    professionals: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::professional.professional'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -683,6 +687,10 @@ export interface ApiProfessionalProfessional
       'api::professional.professional'
     > &
       Schema.Attribute.Private;
+    profession: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::profession.profession'
+    >;
     profileImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
