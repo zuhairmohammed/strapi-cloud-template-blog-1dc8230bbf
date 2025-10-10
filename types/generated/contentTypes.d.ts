@@ -613,50 +613,6 @@ export interface ApiPaymentPayment extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiProfessionProfession extends Struct.CollectionTypeSchema {
-  collectionName: 'professions';
-  info: {
-    displayName: 'Profession';
-    pluralName: 'professions';
-    singularName: 'profession';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Category: Schema.Attribute.Enumeration<
-      [
-        'Religious & Educational',
-        'Professional & Business',
-        'Skilled & Vocational',
-        'Community & Social Service',
-        'Creative & Cultural',
-      ]
-    >;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::profession.profession'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    professionals: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::professional.professional'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiProfessionalProfessional
   extends Struct.CollectionTypeSchema {
   collectionName: 'professionals';
@@ -687,10 +643,6 @@ export interface ApiProfessionalProfessional
       'api::professional.professional'
     > &
       Schema.Attribute.Private;
-    profession: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::profession.profession'
-    >;
     profileImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
@@ -1324,7 +1276,6 @@ declare module '@strapi/strapi' {
       'api::contact-log.contact-log': ApiContactLogContactLog;
       'api::global.global': ApiGlobalGlobal;
       'api::payment.payment': ApiPaymentPayment;
-      'api::profession.profession': ApiProfessionProfession;
       'api::professional.professional': ApiProfessionalProfessional;
       'api::profile.profile': ApiProfileProfile;
       'api::rating.rating': ApiRatingRating;
