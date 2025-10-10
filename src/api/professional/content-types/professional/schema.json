@@ -80,6 +80,9 @@
     "website": {
       "type": "string",
       "required": true
+    },
+    "profession": {
+      "type": "string"
     }
   }
 }

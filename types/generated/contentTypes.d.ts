@@ -643,6 +643,7 @@ export interface ApiProfessionalProfessional
       'api::professional.professional'
     > &
       Schema.Attribute.Private;
+    profession: Schema.Attribute.String;
     profileImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
