@@ -643,43 +643,6 @@ export interface ApiProfessionalProfessional
       'api::professional.professional'
     > &
       Schema.Attribute.Private;
-    Profess: Schema.Attribute.Enumeration<
-      [
-        'Aalim / Maulana',
-        '  Mubaligh',
-        '  Zakir / Noha Khwan / Maddah',
-        '  Religious Teacher',
-        '  Doctor',
-        '  Engineer',
-        '  Legal Consultant',
-        '  Chartered Accountant',
-        '  Architect / Interior Designer',
-        '  IT Professional',
-        '  Entrepreneur',
-        '  Financial Advisor',
-        '  Teacher',
-        '  Pharmacist / Biotechnologist',
-        '  Government Officer',
-        '  Tailor / Fashion Designer',
-        '  Electrician / Plumber / Mechanic',
-        '  Transport Operator',
-        '  Carpenter / Mason / Welder',
-        '  Photographer / Videographer',
-        '  Event Organizer',
-        '  Caterer',
-        '  Beautician / Makeup Artist',
-        '  Social Worker',
-        '  Orphanage Administrator',
-        '  Community Organizer',
-        '  Media & Communication',
-        '  Funeral Service Provider',
-        '  Ziyarat / Pilgrimage Organizer',
-        '  Poet',
-        '  Calligrapher',
-        '  Graphic Designer',
-        '  Language Instructor',
-      ]
-    >;
     profession: Schema.Attribute.String;
     profileImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
