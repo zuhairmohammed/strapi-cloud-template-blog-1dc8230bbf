@@ -83,6 +83,9 @@
     },
     "profession": {
       "type": "string"
+    },
+    "text": {
+      "type": "string"
     }
   }
 }

@@ -652,6 +652,7 @@ export interface ApiProfessionalProfessional
     responsivenessScore: Schema.Attribute.Integer;
     specialization: Schema.Attribute.String;
     state: Schema.Attribute.String;
+    text: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
